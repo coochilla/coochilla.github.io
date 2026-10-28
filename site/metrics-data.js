@@ -1,0 +1,135 @@
+window.COOCHILLA_METRICS = {
+  "schemaVersion": 1,
+  "artistId": "2KMHj8v88gQE6fQZNMp9Qc",
+  "artistName": "Coochilla",
+  "source": "Spotify for Artists",
+  "sourceUrl": "https://artists.spotify.com/c/artist/2KMHj8v88gQE6fQZNMp9Qc/audience/stats",
+  "verifiedOn": "2026-10-29",
+  "period": {
+    "from": "2026-09-30",
+    "to": "2026-10-27"
+  },
+  "metrics": {
+    "listeners": 2323,
+    "streams": 3797,
+    "followers": 1321,
+    "monthlyActiveListeners": 2067,
+    "saves": 25,
+    "playlistAdds": 185
+  },
+  "dailyListeners": [
+    {
+      "date": "2026-09-30",
+      "value": 129
+    },
+    {
+      "date": "2026-10-01",
+      "value": 123
+    },
+    {
+      "date": "2026-10-02",
+      "value": 126
+    },
+    {
+      "date": "2026-10-03",
+      "value": 114
+    },
+    {
+      "date": "2026-10-04",
+      "value": 107
+    },
+    {
+      "date": "2026-10-05",
+      "value": 135
+    },
+    {
+      "date": "2026-10-06",
+      "value": 116
+    },
+    {
+      "date": "2026-10-07",
+      "value": 124
+    },
+    {
+      "date": "2026-10-08",
+      "value": 125
+    },
+    {
+      "date": "2026-10-09",
+      "value": 116
+    },
+    {
+      "date": "2026-10-10",
+      "value": 96
+    },
+    {
+      "date": "2026-10-11",
+      "value": 80
+    },
+    {
+      "date": "2026-10-12",
+      "value": 134
+    },
+    {
+      "date": "2026-10-13",
+      "value": 114
+    },
+    {
+      "date": "2026-10-14",
+      "value": 124
+    },
+    {
+      "date": "2026-10-15",
+      "value": 135
+    },
+    {
+      "date": "2026-10-16",
+      "value": 124
+    },
+    {
+      "date": "2026-10-17",
+      "value": 104
+    },
+    {
+      "date": "2026-10-18",
+      "value": 87
+    },
+    {
+      "date": "2026-10-19",
+      "value": 96
+    },
+    {
+      "date": "2026-10-20",
+      "value": 124
+    },
+    {
+      "date": "2026-10-21",
+      "value": 132
+    },
+    {
+      "date": "2026-10-22",
+      "value": 115
+    },
+    {
+      "date": "2026-10-23",
+      "value": 125
+    },
+    {
+      "date": "2026-10-24",
+      "value": 114
+    },
+    {
+      "date": "2026-10-25",
+      "value": 113
+    },
+    {
+      "date": "2026-10-26",
+      "value": 104
+    },
+    {
+      "date": "2026-10-27",
+      "value": 138
+    }
+  ],
+  "captureMethod": "Authenticated dashboard read in Safari; exact period totals and chart labels"
+};

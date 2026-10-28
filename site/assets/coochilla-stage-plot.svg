@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 355" role="img" aria-labelledby="title desc">
+<title id="title">Coochilla stage plot, viewed from the audience</title>
+<desc id="desc">Bass back-left and drums back-right, neither singing. Guitar left with backing vocal, lead singer center and guitar right with backing vocal at the front. Guitar channels 1 and 2; bass channel 3 plus channel 4 in amp mode; vocals 5 to 7; drums 8 to 13. P marks mains power.</desc>
+<rect width="540" height="355" fill="#eee9de" stroke="#bcb6ab"/>
+<g fill="#171717" font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
+<text x="270" y="26" font-size="10" font-weight="700">UPSTAGE / BACK</text>
+<text x="270" y="43" font-size="9">Viewed from the audience - positions are not to scale</text>
+<rect x="35" y="60" width="215" height="85" rx="4" fill="#fff" stroke="#171717"/>
+<text x="142.5" y="85" font-size="12" font-weight="700">BASS</text>
+<text x="142.5" y="105" font-size="10">No vocal</text>
+<text x="142.5" y="128" font-size="8.5">Ch 3 | + ch 4 in amp mode</text>
+<rect x="232" y="64" width="14" height="14" fill="#ff4c26"/>
+<text x="239" y="74" font-size="8" font-weight="700">P</text>
+<rect x="290" y="60" width="215" height="85" rx="4" fill="#fff" stroke="#171717"/>
+<text x="397.5" y="85" font-size="12" font-weight="700">DRUMS</text>
+<text x="397.5" y="105" font-size="10">No vocal</text>
+<text x="397.5" y="128" font-size="8.5">Ch 8-13 | six-mic basic setup</text>
+<rect x="20" y="195" width="150" height="90" rx="4" fill="#fff" stroke="#171717"/>
+<text x="95.0" y="220" font-size="12" font-weight="700">GUITAR LEFT</text>
+<text x="95.0" y="240" font-size="10">Backing vocal</text>
+<text x="95.0" y="268" font-size="8.5">Instrument ch 1 | vocal ch 6</text>
+<rect x="152" y="199" width="14" height="14" fill="#ff4c26"/>
+<text x="159" y="209" font-size="8" font-weight="700">P</text>
+<rect x="195" y="195" width="150" height="90" rx="4" fill="#fff" stroke="#171717"/>
+<text x="270.0" y="220" font-size="12" font-weight="700">LEAD SINGER</text>
+<text x="270.0" y="240" font-size="10">Lead vocal</text>
+<text x="270.0" y="268" font-size="8.5">Vocal ch 5</text>
+<rect x="370" y="195" width="150" height="90" rx="4" fill="#fff" stroke="#171717"/>
+<text x="445.0" y="220" font-size="12" font-weight="700">GUITAR RIGHT</text>
+<text x="445.0" y="240" font-size="10">Backing vocal</text>
+<text x="445.0" y="268" font-size="8.5">Instrument ch 2 | vocal ch 7</text>
+<rect x="502" y="199" width="14" height="14" fill="#ff4c26"/>
+<text x="509" y="209" font-size="8" font-weight="700">P</text>
+<text x="270" y="174" font-size="8.5">P = mains power at the instrument rigs</text>
+<text x="20" y="309" text-anchor="start" font-size="8.5">Audience left = stage right</text>
+<text x="520" y="309" text-anchor="end" font-size="8.5">Audience right = stage left</text>
+<path d="M20 323H520" stroke="#ff4c26" stroke-width="3"/>
+<text x="270" y="342" font-size="10" font-weight="700">AUDIENCE / FRONT OF STAGE</text></g></svg>

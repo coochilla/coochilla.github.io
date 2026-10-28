@@ -1,0 +1,71 @@
+name: Publish Coochilla and refresh weekly Spotify counts
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '15 10 * * 1'
+      timezone: Europe/Helsinki
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: coochilla-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check independent hosting address
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${GITHUB_REPOSITORY}/pages" > /tmp/coochilla-pages.json
+          python3 - <<'PYCODE'
+          import json
+          from urllib.parse import urlparse
+          with open('/tmp/coochilla-pages.json') as handle:
+              host = urlparse(json.load(handle).get('html_url', '')).hostname
+          if not host or host == 'hectorbahamonde.com' or host.endswith('.hectorbahamonde.com'):
+              raise SystemExit('Configure an independent band address before publishing Coochilla.')
+          PYCODE
+      - name: Refresh public Spotify counts
+        id: spotify
+        continue-on-error: true
+        run: python3 tools/refresh_spotify.py
+      - name: Validate website data
+        run: python3 tools/validate_site.py
+      - name: Save updated counts
+        if: steps.spotify.outcome == 'success'
+        run: |
+          if ! git diff --quiet -- site/spotify-public.json site/spotify-public-data.js; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add site/spotify-public.json site/spotify-public-data.js
+            git commit -m 'Refresh public Spotify listener and follower counts'
+            git push
+          fi
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Report an unavailable Spotify refresh
+        if: steps.spotify.outcome != 'success'
+        run: |
+          echo 'Spotify could not be refreshed. The website retains the last checked counts and their original date.' >> "$GITHUB_STEP_SUMMARY"
+          exit 1
