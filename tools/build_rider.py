@@ -131,7 +131,7 @@ def main():
     plot = canvas.Canvas(str(ASSETS / 'coochilla-stage-plot.pdf'), pagesize=A4)
     plot.setTitle('Coochilla - Stage plot')
     plot.setAuthor('Coochilla')
-    base(plot, 'STAGE PLOT | European Summer Tour - June 2027', 1, 1)
+    base(plot, 'STAGE PLOT | European Tour - September 2027', 1, 1)
     ph = WIDTH * 355 / 540
     y = H - 125 - ph
     plot_pdf(plot, M, y, WIDTH)
@@ -148,7 +148,7 @@ def main():
     rider = canvas.Canvas(str(ASSETS / 'coochilla-technical-rider.pdf'), pagesize=A4)
     rider.setTitle('Coochilla - Technical rider and stage plot')
     rider.setAuthor('Coochilla')
-    base(rider, 'TECHNICAL RIDER | European Summer Tour - June 2027', 1, 2)
+    base(rider, 'TECHNICAL RIDER | European Tour - September 2027', 1, 2)
     y = para(rider, '<b>Five musicians / three vocal positions.</b> Both guitarists sing backing vocals; the central singer handles lead vocals. Bass and drums do not sing.', H - 120)
     ph = WIDTH * 355 / 540
     y -= ph
@@ -161,7 +161,7 @@ def main():
     y = para(rider, 'Please provide a suitable PA and FOH engineer, three vocal microphones with stands, and monitoring for the three front vocal positions, bass and drums. Provide mains power at both guitar rigs and the bass rig. Confirm monitor mixes and any shared feeds in advance.', y)
     assert y > 55, y
     rider.showPage()
-    base(rider, 'INPUT LIST & VENUE ADVANCE | June 2027', 2, 2)
+    base(rider, 'INPUT LIST & VENUE ADVANCE | September 2027', 2, 2)
     y = para(rider, '<b>A / IR:</b> 12 active inputs (3 instruments + 3 vocals + 6 drums). <b>B / amps:</b> 13 active inputs (4 instruments + 3 vocals + 6 drums). Channel 4 is unused in IR mode; remaining channel numbers stay the same.', H - 120)
     rows = [['Ch', 'Source / position', 'A / IR direct to PA', 'B / Amps and cabinets'],
         ['1', 'Guitar - audience left', 'Mono DI / IR', 'One guitar cabinet mic'],

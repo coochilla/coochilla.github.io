@@ -5,7 +5,7 @@ window.COOCHILLA = {
   tagline: 'loud guitars. tight grooves. a psychedelic edge.',
   bio: 'five musicians. loud guitars, tight grooves and a psychedelic edge.',
   bookingEmail: 'bahamondeh@gmail.com',
-  tour: { label: 'european tour', month: 'june 2027' },
+  tour: { label: 'european tour', month: 'september 2027' },
   audience: { summary: 'Thousands of Spotify listeners' },
   links: {
     spotify: 'https://open.spotify.com/artist/2KMHj8v88gQE6fQZNMp9Qc',
@@ -59,6 +59,6 @@ window.COOCHILLA = {
   // Add approved direct URLs to enable these sections; absent assets stay hidden.
   liveVideoUrl: '',
   pressPhotosUrl: '',
-  technicalRiderUrl: 'assets/coochilla-technical-rider.pdf?v=abdc5cf90b',
-  stagePlotUrl: 'assets/coochilla-stage-plot.pdf?v=d5c0a642b2'
+  technicalRiderUrl: 'assets/coochilla-technical-rider.pdf?v=30690b2d27',
+  stagePlotUrl: 'assets/coochilla-stage-plot.pdf?v=a20724903f'
 };
