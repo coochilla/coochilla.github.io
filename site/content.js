@@ -5,7 +5,7 @@ window.COOCHILLA = {
   tagline: 'loud guitars. tight grooves. a psychedelic edge.',
   bio: 'five musicians. loud guitars, tight grooves and a psychedelic edge.',
   bookingEmail: 'bahamondeh@gmail.com',
-  tour: { name: 'chunk of me', label: 'european tour', month: 'summer 2027' },
+  tour: { name: 'chunk of me', label: 'euro tour 2027', month: 'summer 2027' },
   audience: { summary: 'Thousands of Spotify listeners' },
   links: {
     spotify: 'https://open.spotify.com/artist/2KMHj8v88gQE6fQZNMp9Qc',
