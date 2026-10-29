@@ -96,3 +96,7 @@ After rebuilding, update the PDF version queries in `site/content.js` and the
 landing-page download links, then update the content.js hash in index.html.
 
 The promotional page uses concise lowercase copy and unnumbered section labels.
+
+Live history is grouped in native, initially collapsed year dropdowns. Each year
+shows its gig count; opening it reveals the date, venue and city rows. The overall
+37-show summary remains visible while the archive is collapsed.

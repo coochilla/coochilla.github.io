@@ -24,6 +24,9 @@ nav{align-items:flex-start}.navlinks{flex-wrap:wrap;justify-content:flex-end;gap
 @media(max-width:440px){.art-grid{grid-template-columns:1fr}.artwork h3{font-size:26px}}
 .show-summary{display:grid;grid-template-columns:1fr 1fr 1.6fr;gap:18px;padding:0 0 28px;border-bottom:1px solid var(--ink)}.show-summary strong{display:block;font-size:clamp(25px,3.2vw,43px);line-height:1.15;letter-spacing:-.05em;font-weight:800;white-space:nowrap}.show-summary span{font-size:12px}
 @media(max-width:700px){.show-summary{gap:14px}.show-summary strong{font-size:clamp(25px,6.8vw,38px)}}
+.gig-year{display:block;padding:0;border-top:1px solid var(--line)}.gig-year+ .gig-year{border-top:1px solid var(--line)}.gig-year summary{list-style:none;display:flex;align-items:center;gap:24px;min-height:76px;padding:18px 0;cursor:pointer}.gig-year summary::-webkit-details-marker{display:none}.gig-year summary:focus-visible{outline:3px solid var(--accent);outline-offset:5px}.gig-year-label{font-size:36px;line-height:1.15;letter-spacing:-.05em;font-weight:800}.gig-year-count{font-size:13px}.gig-year-arrow{margin-left:auto;font-size:28px;line-height:1;transition:transform .15s}.gig-year[open] .gig-year-arrow{transform:rotate(180deg)}.gig-shows{padding:0 0 22px 108px}
+@media(max-width:700px){.gig-year summary{min-height:72px;gap:18px}.gig-year-label{font-size:30px}.gig-shows{padding-left:0}}
+@media(prefers-reduced-motion:reduce){.gig-year-arrow{transition:none}}
 </style>
 </head>
 <body>
@@ -107,8 +110,14 @@ const archive=[...band.selectedPastShows,...band.shows.filter(s=>s.date<today)].
 const seen=new Set(),years=new Map(),archiveCities=new Set(),archiveDates=[];
 archive.forEach(s=>{
  const key=s.date.slice(0,7)+'|'+s.venue.toLowerCase()+'|'+s.city.toLowerCase();if(seen.has(key))return;seen.add(key);archiveCities.add(s.city.toLowerCase());archiveDates.push(s.date);
- const year=s.date.slice(0,4);if(!years.has(year)){const group=document.createElement('div');group.className='gig-year';const title=document.createElement('h3');title.textContent=year;const list=document.createElement('div');group.append(title,list);byId('past').append(group);years.set(year,list);}years.get(year).append(showRow(s));
+ const year=s.date.slice(0,4);if(!years.has(year)){
+  const group=document.createElement('details');group.className='gig-year';group.setAttribute('name','show-years');
+  const title=document.createElement('summary'),yearLabel=document.createElement('span'),count=document.createElement('span'),arrow=document.createElement('span');
+  yearLabel.className='gig-year-label';yearLabel.textContent=year;count.className='gig-year-count';arrow.className='gig-year-arrow';arrow.textContent='⌄';arrow.setAttribute('aria-hidden','true');title.append(yearLabel,count,arrow);
+  const list=document.createElement('div');list.className='gig-shows';group.append(title,list);byId('past').append(group);years.set(year,list);
+ }years.get(year).append(showRow(s));
 });
+for(const list of years.values())list.parentElement.querySelector('.gig-year-count').textContent=list.children.length+' shows';
 if(archiveDates.length){
  const summary=byId('show-summary');
  for(const [value,label] of [[seen.size,'shows listed'],[archiveCities.size,'cities'],[archiveDates[archiveDates.length-1].slice(0,4)+'–'+archiveDates[0].slice(0,4),'years']]){
