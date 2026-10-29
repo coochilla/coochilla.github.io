@@ -100,3 +100,7 @@ The promotional page uses concise lowercase copy and unnumbered section labels.
 Live history is grouped in native, initially collapsed year dropdowns. Each year
 shows its gig count; opening it reveals the date, venue and city rows. The overall
 37-show summary remains visible while the archive is collapsed.
+
+Main section order: tour, about, pics, data, music, merch, shows, booking.
+Cover art sits within music; verified press links are in an expandable block
+within about. The leading cover is Don't Feel Like Dancing Anymore.
