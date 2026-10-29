@@ -4,7 +4,7 @@ window.COOCHILLA_PUBLIC = {
   "artistName": "Coochilla",
   "source": "Spotify public artist profile",
   "sourceUrl": "https://open.spotify.com/artist/2KMHj8v88gQE6fQZNMp9Qc",
-  "checkedAt": "2026-10-29T11:38:14.332418+00:00",
+  "checkedAt": "2026-10-29T12:36:51.741382+00:00",
   "verifiedOn": "2026-10-29",
   "metrics": {
     "listeners": 2323,
