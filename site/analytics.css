@@ -1,0 +1,9 @@
+.privacy-link{padding:0;border:0;border-radius:0;background:transparent;color:inherit;font:inherit;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.analytics-consent{position:fixed;z-index:20;left:20px;right:20px;bottom:20px;max-width:780px;margin:auto;padding:18px 22px;background:var(--paper);color:var(--ink);border:1px solid var(--ink);box-shadow:0 4px 24px #0002;display:flex;align-items:center;gap:24px;font-size:14px;line-height:1.5}
+.analytics-consent p{margin:0;flex:1}
+.consent-actions{display:flex;gap:10px;flex-shrink:0}
+.consent-actions button{min-height:44px;padding:9px 18px;border:1px solid var(--ink);background:transparent;color:var(--ink);font:inherit;cursor:pointer}
+.consent-actions button:hover{background:var(--ink);color:var(--paper)}
+.privacy-dialog{width:calc(100% - 32px);max-width:640px;max-height:calc(100dvh - 32px);padding:28px;border:1px solid var(--ink);background:var(--paper);color:var(--ink);overflow:auto}
+.privacy-dialog::backdrop{background:#0009}.privacy-dialog h2{font-size:36px;line-height:1.1;margin:24px 0}.privacy-dialog p{font-size:15px;line-height:1.6}.privacy-dialog>button{float:right;font-size:14px}
+@media(max-width:600px){.analytics-consent{left:12px;right:12px;bottom:12px;padding:16px;display:block}.analytics-consent .consent-actions{margin-top:14px}.consent-actions button{flex:1}.privacy-dialog{padding:22px}}

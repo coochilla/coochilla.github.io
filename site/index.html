@@ -29,6 +29,8 @@ nav{align-items:flex-start}.navlinks{flex-wrap:wrap;justify-content:flex-end;gap
 @media(prefers-reduced-motion:reduce){.gig-year-arrow{transition:none}}
 #music .art-section{grid-column:1/-1;padding:28px 0 0;border:0}.section-heading h3{margin:0;font-size:clamp(32px,4vw,48px);line-height:1.05;letter-spacing:-.045em}
 </style>
+<link rel="stylesheet" href="analytics.css">
+<script defer src="analytics.js" data-measurement-id="G-7F0BX5F03V"></script>
 </head>
 <body>
 <header>
@@ -77,7 +79,19 @@ nav{align-items:flex-start}.navlinks{flex-wrap:wrap;justify-content:flex-end;gap
 <section class="contact" id="contact" aria-labelledby="contact-title"><span class="small">hector</span><h2 id="contact-title">booking</h2><a class="email" id="booking-email"></a><p>send your venue, city, dates and production details.</p><div class="actions"><a class="button" data-rider-download href="assets/coochilla-technical-rider.pdf?v=30690b2d27" download="coochilla-technical-rider.pdf">technical rider ↓</a></div></section>
 </main>
 <dialog class="photo-dialog" id="photo-dialog" aria-labelledby="photo-dialog-title"><div class="photo-dialog-head"><h2 id="photo-dialog-title">pics</h2><button class="photo-close" id="photo-close" type="button" autofocus>close ×</button></div><img class="photo-expanded" id="photo-expanded" alt=""><div id="photo-dialog-description" class="gallery-description" hidden></div><div class="photo-toolbar"><span class="photo-count" id="photo-dialog-count" aria-live="polite"></span><div class="photo-controls"><button type="button" data-dialog-step="-1" aria-label="previous image">←</button><button type="button" data-dialog-step="1" aria-label="next image">→</button></div><a class="photo-download" id="photo-download" download>download ↓</a></div></dialog>
-<footer><span>coochilla</span><a id="linktree-link">links ↗</a></footer>
+<footer><span>coochilla</span><button id="privacy-settings" class="privacy-link" type="button" hidden>privacy & cookies</button><a id="linktree-link">links ↗</a></footer>
+<aside id="analytics-consent" class="analytics-consent" aria-label="visit statistics" hidden>
+<p>allow visit statistics? we use google analytics to see which pages are visited and where visitors come from. <button class="privacy-link" type="button" id="privacy-details">details</button></p>
+<div class="consent-actions"><button type="button" data-analytics-choice="granted">allow</button><button type="button" data-analytics-choice="denied">decline</button></div>
+</aside>
+<dialog id="privacy-dialog" class="privacy-dialog" aria-labelledby="privacy-title">
+<button id="privacy-close" class="privacy-link" type="button" autofocus>close ×</button><h2 id="privacy-title">privacy & cookies</h2>
+<p>with your permission, google analytics measures visits, approximate country and city, traffic sources, page use, booking-link clicks and rider downloads. it uses analytics cookies to recognise visits. advertising features are disabled.</p>
+<p>analytics loads only after you allow it. declining leaves it off. your choice is saved in this browser for six months; you can change it here at any time.</p>
+<p>statistics are processed by google. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">google’s privacy policy ↗</a></p>
+<p>questions: <a href="mailto:bahamondeh@gmail.com">bahamondeh@gmail.com</a></p><p id="analytics-choice" class="muted"></p>
+<div class="consent-actions"><button type="button" data-analytics-choice="granted">allow</button><button type="button" data-analytics-choice="denied">decline</button></div>
+</dialog>
 <script src="gallery.js?v=852a073cf5"></script>
 <script src="content.js?v=4a85f2b3fb"></script>
 <script>

@@ -103,3 +103,24 @@ shows its gig count; opening it reveals the date, venue and city rows. The overa
 
 Main section order: tour, about, pics, data, music, merch, shows, press, booking.
 Cover art sits within music; verified press links appear directly below shows. The leading cover is Don't Feel Like Dancing Anymore.
+
+## Visitor analytics
+
+Coochilla has its own GA4 property in Hector's existing Analytics account, with
+the `coochilla.github.io` web stream and measurement ID `G-7F0BX5F03V`.
+The academic website's property and tag are separate and unchanged.
+Reporting uses Finland time and euros. The measurement ID is public, not a secret.
+
+`site/analytics.js` implements basic consent: no Google Analytics script, cookies
+or events load before permission. An allow/decline banner and footer privacy
+settings retain the choice for 180 days. Withdrawal disables events, clears
+Analytics cookies and reloads to remove the loaded Google code. Advertising
+storage, Google signals and ad personalization are disabled.
+
+Analytics measures page views, country/city (approximate), traffic sources,
+scrolls, outbound clicks, `booking_click` and `rider_download`. Custom events
+send only the event name, not the booking address, mail subject or form data.
+Page location excludes queries and fragments. Automatic form, search, video,
+file-download and history-change measurement are disabled in the web stream.
+Visits without permission or with blockers are not counted. Data starts with
+installation; it cannot recover earlier visits.
