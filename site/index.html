@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="coochilla — alternative rock from turku, finland. european tour, summer 2027. music, pics, art, merch, press and booking.">
-<title>coochilla — dossier / summer 2027</title>
+<meta name="description" content="coochilla — alternative rock from turku, finland. chunk of me / european tour, summer 2027. music, pics, art, merch, press and booking.">
+<title>coochilla — chunk of me / summer 2027</title>
 <style>
 :root{--paper:#eee9de;--ink:#171717;--accent:#ff4c26;--line:#bcb6ab}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 Arial,Helvetica,sans-serif;text-transform:lowercase}a{color:inherit;text-underline-offset:5px}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:5px}header,main,footer{max-width:1440px;margin:auto;padding:0 5vw}nav{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:24px 0;border-bottom:1px solid var(--ink)}.small{letter-spacing:.1em;font-size:12px;font-weight:700}.navlinks{display:flex;gap:24px}.navlinks a{text-decoration:none}h1{font-size:clamp(58px,10vw,140px);letter-spacing:-.075em;line-height:.95;margin:36px 0 24px;font-weight:900}h2{font-size:clamp(32px,5vw,60px);line-height:1.05;letter-spacing:-.045em;margin:12px 0 24px}p{max-width:680px}.hero-meta{padding-bottom:26px}.hero-meta p{margin:0}.tour{background:var(--accent);margin:0 -5vw;padding:38px 5vw;display:grid;grid-template-columns:1.4fr 1fr;gap:40px}.tour h2{font-size:clamp(42px,6vw,82px);margin:10px 0 0}.tour-details{align-self:end}.button{display:inline-block;padding:13px 20px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:700;font-size:14px}.button.light{background:var(--paper);color:var(--ink)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.section{display:grid;grid-template-columns:1fr 2fr;gap:50px;padding:60px 0;border-bottom:1px solid var(--line);scroll-margin-top:24px}.section h2{font-size:clamp(30px,4vw,48px)}.lede{font-size:clamp(22px,3vw,34px);line-height:1.35;letter-spacing:-.025em;margin:0 0 28px;max-width:750px}.promotion{margin:18px 0;font-size:16px}.muted{color:#57534e;font-size:13px}.show{padding:20px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:130px 1fr;gap:22px}.show strong{font-size:21px}.show p{margin:4px 0}.label{margin:0 0 14px}.contact{padding:64px 0 80px;scroll-margin-top:24px}.contact h2{font-size:clamp(36px,5vw,62px)}.email{font-size:clamp(19px,3.5vw,42px);font-weight:700;overflow-wrap:anywhere}footer{border-top:1px solid var(--ink);padding-top:22px;padding-bottom:30px;display:flex;justify-content:space-between;gap:25px;font-size:12px}[hidden]{display:none!important}
@@ -93,15 +93,15 @@ nav{align-items:flex-start}.navlinks{flex-wrap:wrap;justify-content:flex-end;gap
 <div class="consent-actions"><button type="button" data-analytics-choice="granted">allow</button><button type="button" data-analytics-choice="denied">decline</button></div>
 </dialog>
 <script src="gallery.js?v=852a073cf5"></script>
-<script src="content.js?v=71c946bb05"></script>
+<script src="content.js?v=bc1db0ff2b"></script>
 <script>
 'use strict';
 const band=window.COOCHILLA;
 const byId=id=>document.getElementById(id);
 function setLink(id,url){const a=byId(id);a.href=url;if(!url.startsWith('mailto:')){a.target='_blank';a.rel='noopener noreferrer';}}
 byId('identity').textContent=(band.genre+' / '+band.hometown).toLowerCase();
-byId('tour-label').textContent=band.tour.label;
-byId('tour-title').textContent=band.tour.month;
+byId('tour-label').textContent=band.tour.label+' / '+band.tour.month;
+byId('tour-title').textContent=band.tour.name;
 byId('bio').textContent=band.bio;
 const mail='mailto:'+band.bookingEmail+'?subject='+encodeURIComponent('coochilla — july 2027 booking');
 setLink('booking-top',mail);setLink('booking-email',mail);byId('booking-email').textContent=band.bookingEmail;
