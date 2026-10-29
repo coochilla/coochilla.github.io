@@ -28,6 +28,7 @@ nav{align-items:flex-start}.navlinks{flex-wrap:wrap;justify-content:flex-end;gap
 @media(max-width:700px){.gig-year summary{min-height:72px;gap:18px}.gig-year-label{font-size:30px}.gig-shows{padding-left:0}}
 @media(prefers-reduced-motion:reduce){.gig-year-arrow{transition:none}}
 #music .art-section{grid-column:1/-1;padding:28px 0 0;border:0}.section-heading h3{margin:0;font-size:clamp(32px,4vw,48px);line-height:1.05;letter-spacing:-.045em}
+.tour-subtitle{font-size:clamp(22px,3vw,34px);font-weight:400;line-height:1.2;letter-spacing:-.02em;margin:14px 0 0}
 </style>
 <link rel="stylesheet" href="analytics.css">
 <script defer src="analytics.js" data-measurement-id="G-7F0BX5F03V"></script>
@@ -39,7 +40,7 @@ nav{align-items:flex-start}.navlinks{flex-wrap:wrap;justify-content:flex-end;gap
 <div class="hero-meta"><p class="small" id="identity"></p></div>
 </header>
 <main>
-<section class="tour" aria-labelledby="tour-title"><div><span class="small" id="tour-label"></span><h2 id="tour-title"></h2></div><div class="tour-details"><div class="actions"><a class="button" id="booking-top">booking ↗</a><a class="button light" data-rider-download href="assets/coochilla-technical-rider.pdf?v=30690b2d27" download="coochilla-technical-rider.pdf">technical rider ↓</a></div></div></section>
+<section class="tour" aria-labelledby="tour-title"><div><h2 id="tour-title"></h2><p class="tour-subtitle" id="tour-label"></p></div><div class="tour-details"><div class="actions"><a class="button" id="booking-top">booking ↗</a><a class="button light" data-rider-download href="assets/coochilla-technical-rider.pdf?v=30690b2d27" download="coochilla-technical-rider.pdf">technical rider ↓</a></div></div></section>
 <section class="section" id="about" aria-labelledby="about-title"><div><span class="small">artist overview</span><h2 id="about-title">about</h2></div><div><p class="lede" id="bio"></p><p class="promotion">we promote each show with a social media campaign in the venue’s city.</p></div></section>
 <section class="photo-gallery" id="photos" data-gallery aria-labelledby="photos-title" aria-roledescription="carousel">
 <div class="photo-heading"><h2 id="photos-title">pics</h2></div>
@@ -100,8 +101,8 @@ const band=window.COOCHILLA;
 const byId=id=>document.getElementById(id);
 function setLink(id,url){const a=byId(id);a.href=url;if(!url.startsWith('mailto:')){a.target='_blank';a.rel='noopener noreferrer';}}
 byId('identity').textContent=(band.genre+' / '+band.hometown).toLowerCase();
-byId('tour-label').hidden=true;
-byId('tour-title').textContent='"'+band.tour.name+'" '+band.tour.label;
+byId('tour-title').textContent='"'+band.tour.name+'"';
+byId('tour-label').textContent=band.tour.label;
 byId('bio').textContent=band.bio;
 const mail='mailto:'+band.bookingEmail+'?subject='+encodeURIComponent('coochilla — july 2027 booking');
 setLink('booking-top',mail);setLink('booking-email',mail);byId('booking-email').textContent=band.bookingEmail;
