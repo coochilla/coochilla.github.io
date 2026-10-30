@@ -4,41 +4,41 @@ window.COOCHILLA_PUBLIC = {
   "artistName": "Coochilla",
   "source": "Spotify public artist profile",
   "sourceUrl": "https://open.spotify.com/artist/2KMHj8v88gQE6fQZNMp9Qc",
-  "checkedAt": "2026-10-29T17:06:15.385194+00:00",
-  "verifiedOn": "2026-10-29",
+  "checkedAt": "2026-10-30T21:36:55.050248+00:00",
+  "verifiedOn": "2026-10-30",
   "metrics": {
-    "listeners": 2323,
+    "listeners": 2325,
     "followers": 1322
   },
   "tracks": {
     "5w3CG310MBfGUhKDloWWbu": {
       "name": "Don't Feel Like Dancing Anymore",
-      "streams": 1613028,
-      "verifiedOn": "2026-10-29",
+      "streams": 1613152,
+      "verifiedOn": "2026-10-30",
       "sourceUrl": "https://open.spotify.com/artist/2KMHj8v88gQE6fQZNMp9Qc"
     },
     "0Bra61AKU3OligXfYgAkoR": {
       "name": "Miasma",
-      "streams": 22957,
-      "verifiedOn": "2026-10-29",
+      "streams": 22959,
+      "verifiedOn": "2026-10-30",
       "sourceUrl": "https://open.spotify.com/artist/2KMHj8v88gQE6fQZNMp9Qc"
     },
     "5u6mKappybFn8GnwXGrxnD": {
       "name": "Your World",
-      "streams": 14594,
-      "verifiedOn": "2026-10-29",
+      "streams": 14596,
+      "verifiedOn": "2026-10-30",
       "sourceUrl": "https://open.spotify.com/artist/2KMHj8v88gQE6fQZNMp9Qc"
     },
     "5ht9zgUbF72saN5qmhNIcl": {
       "name": "Gotta Keep Loving",
-      "streams": 11727,
-      "verifiedOn": "2026-10-29",
+      "streams": 11728,
+      "verifiedOn": "2026-10-30",
       "sourceUrl": "https://open.spotify.com/artist/2KMHj8v88gQE6fQZNMp9Qc"
     },
     "2ci1Xk21qMxnJB1F7uBGg6": {
       "name": "Tone of the New Day",
-      "streams": 19261,
-      "verifiedOn": "2026-10-29",
+      "streams": 19263,
+      "verifiedOn": "2026-10-30",
       "sourceUrl": "https://open.spotify.com/artist/2KMHj8v88gQE6fQZNMp9Qc"
     }
   }
