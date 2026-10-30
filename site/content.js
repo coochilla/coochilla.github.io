@@ -16,7 +16,9 @@ window.COOCHILLA = {
   },
   // Add only approved, public shows here. Dates use YYYY-MM-DD.
   // Example structure: {date, venue, city, country, ticketUrl, sourceUrl}.
-  shows: [],
+  shows: [
+    { date: '2027-07-24', venue: 'Kopf und Kragen', city: 'Fürth', country: 'Germany' }
+  ],
   selectedPastShows: [
     {date: "2018-05", venue: "Baaribaari", city: "Turku", country: "Finland"},
     {"date": "2018-03", "venue": "Baaribaari", "city": "Turku", "country": "Finland"},
@@ -59,6 +61,6 @@ window.COOCHILLA = {
   // Add approved direct URLs to enable these sections; absent assets stay hidden.
   liveVideoUrl: '',
   pressPhotosUrl: '',
-  technicalRiderUrl: 'assets/coochilla-technical-rider.pdf?v=30690b2d27',
-  stagePlotUrl: 'assets/coochilla-stage-plot.pdf?v=a20724903f'
+  technicalRiderUrl: 'assets/coochilla-technical-rider.pdf?v=4a60060973',
+  stagePlotUrl: 'assets/coochilla-stage-plot.pdf?v=4bc3a67b45'
 };
