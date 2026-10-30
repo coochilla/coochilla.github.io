@@ -43,7 +43,7 @@ nav{align-items:flex-start}.navlinks{flex-wrap:wrap;justify-content:flex-end;gap
 </header>
 <main>
 <section class="tour" aria-labelledby="tour-title"><div><h2 id="tour-title"></h2><p class="tour-subtitle" id="tour-label"></p></div><div class="tour-details"><div class="actions"><a class="button" id="booking-top">booking ↗</a><a class="button light" data-rider-download href="assets/coochilla-technical-rider.pdf?v=4a60060973" download="coochilla-technical-rider.pdf">technical rider ↓</a></div></div></section>
-<section class="tour-dates" id="tour-dates" aria-labelledby="tour-dates-title"><h2 id="tour-dates-title">tour dates</h2><div id="tour-date-list"><div class="tour-date"><time datetime="2027-07-24">24 jul 2027</time><span class="tour-date-city">fürth</span><strong class="tour-date-venue">kopf und kragen</strong></div></div></section>
+<section class="tour-dates" id="tour-dates" aria-labelledby="tour-dates-title"><h2 id="tour-dates-title">tour dates</h2><div id="tour-date-list"><div class="tour-date"><time datetime="2027-07-24">24 jul 2027</time><span class="tour-date-city">fürth (de)</span><strong class="tour-date-venue">kopf und kragen</strong></div></div></section>
 <section class="section" id="about" aria-labelledby="about-title"><div><span class="small">artist overview</span><h2 id="about-title">about</h2></div><div><p class="lede" id="bio"></p><p class="promotion">we promote each show with a social media campaign in the venue’s city.</p></div></section>
 <section class="photo-gallery" id="photos" data-gallery aria-labelledby="photos-title" aria-roledescription="carousel">
 <div class="photo-heading"><h2 id="photos-title">pics</h2></div>
@@ -97,7 +97,7 @@ nav{align-items:flex-start}.navlinks{flex-wrap:wrap;justify-content:flex-end;gap
 <div class="consent-actions"><button type="button" data-analytics-choice="granted">allow</button><button type="button" data-analytics-choice="denied">decline</button></div>
 </dialog>
 <script src="gallery.js?v=852a073cf5"></script>
-<script src="content.js?v=e5704ab3fa"></script>
+<script src="content.js?v=ec7e59c1f1"></script>
 <script>
 'use strict';
 const band=window.COOCHILLA;
@@ -129,7 +129,7 @@ upcoming.forEach(show=>{
  const row=document.createElement('div');row.className='tour-date';
  const date=document.createElement('time');date.dateTime=show.date;
  date.textContent=new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(show.date+'T12:00:00Z')).toLowerCase();
- const city=document.createElement('span');city.className='tour-date-city';city.textContent=show.city.toLowerCase();
+ const city=document.createElement('span');city.className='tour-date-city';city.textContent=show.city.toLowerCase()+(show.countryCode?' ('+show.countryCode.toLowerCase()+')':'');
  const venue=document.createElement('strong');venue.className='tour-date-venue';venue.textContent=show.venue.toLowerCase();
  row.append(date,city,venue);tourList.append(row);
 });

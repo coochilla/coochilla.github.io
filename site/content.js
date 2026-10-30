@@ -17,7 +17,7 @@ window.COOCHILLA = {
   // Add only approved, public shows here. Dates use YYYY-MM-DD.
   // Example structure: {date, venue, city, country, ticketUrl, sourceUrl}.
   shows: [
-    { date: '2027-07-24', venue: 'Kopf und Kragen', city: 'Fürth', country: 'Germany' }
+    { date: '2027-07-24', venue: 'Kopf und Kragen', city: 'Fürth', country: 'Germany', countryCode: 'DE' }
   ],
   selectedPastShows: [
     {date: "2018-05", venue: "Baaribaari", city: "Turku", country: "Finland"},
