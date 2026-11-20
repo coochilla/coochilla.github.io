@@ -27,6 +27,9 @@ Refreshing those fields requires a separately supported analytics source.
 ## Editing
 
 Edit `site/content.js` for band information, materials and approved shows.
+Confirmed co-bills go in a show's `support` list (`{name, instagram}`); the tour
+dates and the archive show them as "with name (@handle)", the handle linking to Instagram.
+After editing `content.js`, update its `?v=` hash in `index.html` (first 10 hex of its SHA-256).
 Production details and footage without supplied material stay hidden.
 The `site/` directory alone is deployed. Email outreach and private tour planning
 do not belong in this repository.

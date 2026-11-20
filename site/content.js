@@ -16,8 +16,10 @@ window.COOCHILLA = {
   },
   // Add only approved, public shows here. Dates use YYYY-MM-DD.
   // Example structure: {date, venue, city, country, ticketUrl, sourceUrl}.
+  // Confirmed co-bills: support: [{name, instagram}] (handle without @), shown as "with name (@handle)".
   shows: [
-    { date: '2027-07-24', venue: 'Kopf und Kragen', city: 'Fürth', country: 'Germany', countryCode: 'DE' }
+    { date: '2027-07-24', venue: 'Kopf und Kragen', city: 'Fürth', country: 'Germany', countryCode: 'DE',
+      support: [{ name: 'Perception', instagram: 'perception_rockband' }] }
   ],
   selectedPastShows: [
     {date: "2018-05", venue: "Baaribaari", city: "Turku", country: "Finland"},
