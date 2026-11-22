@@ -85,18 +85,16 @@ and `site/gallery.js` controls the viewer. Image links also work without JavaScr
 
 The promotional landing page shows download links only. Stage plots, patch
 lists, microphone requirements and routing belong in the downloadable PDF.
-The two-page technical rider includes the audience-view stage plot and both
-instrument modes. IR mode uses three mono instrument feeds (one per guitar
-and bass). Amp mode uses three cabinet mics plus a separate bass IR feed,
-for four instrument channels. Both modes have three vocals and a basic
-six-mic drum package: kick, snare top, rack tom, floor tom and two overheads.
+The technical rider is a one-page PDF supplied by the band (November 2026),
+with the stage plot, venue requirements and a 20-channel input list. It is
+published unmodified as `site/assets/coochilla-technical-rider.pdf`.
 
-The suggested patch reserves channel 4 for the additional bass IR in amp mode:
-12 active inputs in IR mode, 13 in amp mode. Drum configuration and any extra
-toms are confirmed in advance. Technical PDFs and the supporting SVG are in
-`site/assets/`. Rebuild with `python3 tools/build_rider.py` using ReportLab.
-After rebuilding, update the PDF version queries in `site/content.js` and the
-landing-page download links, then update the content.js hash in index.html.
+To replace it, copy the new PDF over that file, update its version query in
+`site/content.js` and in the three download links in `index.html`, then update
+the content.js hash in index.html.
+
+Do not run `tools/build_rider.py`: it generates the superseded October 2026
+rider and would overwrite the supplied PDF.
 
 The promotional page uses concise lowercase copy and unnumbered section labels.
 

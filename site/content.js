@@ -63,6 +63,6 @@ window.COOCHILLA = {
   // Add approved direct URLs to enable these sections; absent assets stay hidden.
   liveVideoUrl: '',
   pressPhotosUrl: '',
-  technicalRiderUrl: 'assets/coochilla-technical-rider.pdf?v=4a60060973',
+  technicalRiderUrl: 'assets/coochilla-technical-rider.pdf?v=a32f3e3797',
   stagePlotUrl: 'assets/coochilla-stage-plot.pdf?v=4bc3a67b45'
 };
