@@ -94,7 +94,7 @@ To replace it, copy the new PDF over that file, update its version query in
 the content.js hash in index.html.
 
 Do not run `tools/build_rider.py`: it generates the superseded October 2026
-rider and would overwrite the supplied PDF.
+rider and the retired stage plot, and would overwrite the supplied PDF.
 
 The promotional page uses concise lowercase copy and unnumbered section labels.
 
